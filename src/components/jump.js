@@ -12,14 +12,12 @@ export default {
   },
   events: {
     jump () {
-      // console.log('jump', this.data.speed)
       if (!this.data.enabled) return
       const { throttle } = this.data
       const speed = this.el.components.speed
       const now = Date.now()
       if (now - this.lastJumpTime < throttle) return
       this.lastJumpTime = now
-      console.log('jump', speed.getSpeed())
       speed.add(this.data.speed)
     }
   }

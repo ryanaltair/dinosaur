@@ -12,12 +12,8 @@ function updateEl (el) {
       updateEl(child)
     }
   }
-  if (el?.isEntity) {
-    console.log(el)
-    try {
-      el?.updateComponents()
-    } catch (error) {
-    }
+  if (el.isEntity && !el.hasAttribute('aframe-injected')) {
+    el.updateComponents()
   }
 }
 updateEl(document.querySelector('a-scene'))

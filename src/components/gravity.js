@@ -8,7 +8,6 @@ export default {
     value: { type: 'number', default: 9.8 }
   },
   init () {
-    console.log('speed init', this.el)
     this.speed = 0
   },
   tick (time, deltaTime) {

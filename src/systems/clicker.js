@@ -5,7 +5,6 @@ export default {
   },
   init () {
     this.el.canvas.addEventListener('pointerdown', () => {
-      console.log('click emit', this.data.target, this.data.event)
       this.data.target?.emit(this.data.event)
     })
   },
