@@ -1,9 +1,5 @@
 import test from './test.js'
 import clicker from './clicker.js'
 
-const systems = [
-  { name: 'test', template: test },
-  { name: 'clicker', template: clicker },
-  
-]
+const systems = { test, clicker }
 export default systems

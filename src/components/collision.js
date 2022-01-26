@@ -5,9 +5,7 @@ export default {
     listeners: { type: 'selectorAll', default: '' }
   },
   init () {},
-  update () {
-    console.log('collision init', this.data)
-  },
+  update () {},
   tick () {
     const targets = this.data.targets ?? []
     const listeners = this.data.listeners ?? [this.el]
@@ -16,7 +14,7 @@ export default {
       const position = target.object3D.position
       const distance = playerPos.distanceTo(position)
       if (distance < 0.5) {
-        for(const listener of listeners){
+        for (const listener of listeners) {
           listener.emit(this.data.event)
         }
       }
