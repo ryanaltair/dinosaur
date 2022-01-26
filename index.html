@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <title>dinosaur jumps</title>
+  <script src="https://unpkg.com/aframe"></script>
+  <script type="module" src="./src/main.js"></script>
+  <body>
+    <a-scene clicker="target:a-box" >
+      <a-box
+        jump=""
+        collision="targets:a-sphere;event:score_down;listeners:a-text"
+        position="-2 0.5 -5"
+        rotation="0 0 0"
+        color="cyan"
+      ></a-box>
+      <a-sphere
+        shoot="origin:5 0.125 -5"
+        position="5 0.125 -5"
+        radius="0.25"
+        color="red"
+      ></a-sphere>
+      <a-cylinder
+        position="-3 0.5 -5"
+        collision="targets:a-sphere;event:score_up;listeners:a-text"
+        radius="0.5"
+        height="1.5"
+        color="white"
+      ></a-cylinder>
+      <a-plane
+        position="0 0 -4"
+        rotation="-90 0 0"
+        width="4"
+        height="4"
+        color="gray"
+      ></a-plane>
+      <a-text score value="score" position="0 3 -5" color="blue"></a-text>
+      <a-sky color="silver"></a-sky>
+    </a-scene>
+  </body>
+</html>
