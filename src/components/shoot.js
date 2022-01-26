@@ -1,3 +1,4 @@
+const { Vector3 } = THREE
 export default {
   schema: {
     enabled: { type: 'boolean', default: true },
