@@ -5,6 +5,9 @@ export default {
   schema: {
     enabled: { type: 'boolean', default: true },
     base: { type: 'number', default: 0.0 }
+
+
+    
   },
   init () {
     this.speed = 0
